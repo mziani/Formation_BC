@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "type": "al",
+      "request": "launch",
+      "name": "Client Web",
+      "server": "https://docker.talent-bs.com/",
+      "serverInstance": "formation-mozdev", 
+            "tenant": "default",
+      "port": 443,
+      "authentication": "UserPassword",
+      "startupObjectId": 50102,
+      "startupObjectType": "Page",
+      "breakOnError": true,
+      "launchBrowser": true,
+      "enableLongRunningSqlStatements": true,
+      "enableSqlInformationDebugger": true,
+      "schemaUpdateMode": "ForceSync"
+    },
+    {
+      "name": "Debug Web Service",
+      "type": "al",
+      "request": "attach",
+      "server": "https://docker.talent-bs.com/",
+      "serverInstance": "formation-mozdev", 
+            "tenant": "default",
+      "port": 443,
+      "authentication": "UserPassword",
+      "breakOnError": true,
+      "breakOnRecordWrite": false,
+      "enableSqlInformationDebugger": true,
+      "enableLongRunningSqlStatements": true,
+      "longRunningSqlStatementsThreshold": 500,
+      "numberOfSqlStatements": 10,
+      "breakOnNext": "WebServiceClient"
+    }
+  ]
+}
